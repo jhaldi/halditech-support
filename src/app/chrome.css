@@ -1,0 +1,119 @@
+/* Site chrome (header + footer) for the Support zone — matches halditech.com's brand shell.
+   Brand tokens: ink #1a1a1a, brand-blue #5c7aea, mist #f4f4f5 (Brand Guidelines §04). */
+:root {
+  --ink: #1a1a1a;
+  --brand-blue: #5c7aea;
+  --mist: #f4f4f5;
+  --fg: #1a1a1a;
+}
+
+body {
+  font-family: var(--font-nunito), system-ui, sans-serif;
+  color: var(--fg);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
+
+/* --- header --- */
+.site-header {
+  background: var(--ink);
+  color: #fff;
+}
+.site-header__nav {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 16px 24px;
+}
+.site-header__logo {
+  display: inline-flex;
+}
+.site-header__logo img {
+  height: 32px;
+  width: auto;
+}
+.site-header__actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.site-btn {
+  font-family: var(--font-bai), system-ui, sans-serif;
+  white-space: nowrap;
+  border-radius: 6px;
+  background: var(--brand-blue);
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #fff;
+  text-decoration: none;
+}
+.site-btn:hover {
+  opacity: 0.9;
+}
+
+/* --- footer --- */
+.site-footer {
+  margin-top: auto;
+  background: var(--mist);
+}
+.site-footer__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 56px 24px;
+}
+.site-footer__grid {
+  display: grid;
+  gap: 40px;
+}
+@media (min-width: 640px) {
+  .site-footer__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.site-footer__logo img {
+  height: 28px;
+  width: auto;
+}
+.site-footer__head {
+  font-family: var(--font-bai), system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+.site-footer__list {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgba(26, 26, 26, 0.7);
+}
+.site-footer__list a {
+  color: inherit;
+  text-decoration: none;
+}
+.site-footer__list a:hover {
+  text-decoration: underline;
+}
+.site-footer__disclaimer {
+  margin-top: 48px;
+  max-width: 56rem;
+  font-size: 12px;
+  line-height: 1.6;
+  color: rgba(26, 26, 26, 0.5);
+}
+.site-footer__copy {
+  margin-top: 16px;
+  font-size: 12px;
+  color: rgba(26, 26, 26, 0.5);
+}
