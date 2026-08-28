@@ -29,10 +29,11 @@ function renderBody(doc: SupportDoc): { html: string; toc: Array<{ id: string; t
     return `<h2 id="${id}"${attrs}>${inner}</h2>`;
   });
 
-  // Screenshots are served statically from public/support-assets/<slug>/.
+  // Screenshots are served statically from public/support-assets/<slug>/. Absolute to the zone origin
+  // so they resolve when this app is served under halditech.com/support (multi-zone), not just standalone.
   html = html.replace(
     /(<img\b[^>]*\bsrc=")(img-[^"]+)"/gi,
-    (_m, pre, file) => `${pre}/support-assets/${doc.slug}/${file}"`,
+    (_m, pre, file) => `${pre}https://halditech-support.vercel.app/support-assets/${doc.slug}/${file}"`,
   );
 
   return { html, toc };
