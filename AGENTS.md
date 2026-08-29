@@ -22,3 +22,13 @@ fires inside GTM — never add a competing GA4 tag. Don't remove or duplicate th
 ## Deploy target
 Its own Vercel project; eventually served at **halditech.com/support** via a rewrite from `halditech-web`.
 The 301 map from the old Freshdesk KB URLs is tracked in **#497**.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
