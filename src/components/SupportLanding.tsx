@@ -1,7 +1,15 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+
+/** GTM dataLayer accessor — GA4 receives KB-search events via a GTM "kb_search" Custom Event trigger
+ *  on container GTM-PTNGVBS (wired in layout.tsx; do not touch that block). */
+function dataLayer(): Array<Record<string, unknown>> {
+  const w = window as unknown as { dataLayer?: Array<Record<string, unknown>> };
+  w.dataLayer = w.dataLayer ?? [];
+  return w.dataLayer;
+}
 
 export interface LandingDoc {
   slug: string;
@@ -54,6 +62,30 @@ export function SupportLanding({
   const totalShown = activeTag
     ? matches.filter((d) => d.tags.includes(activeTag)).length
     : matches.length;
+
+  // #500: emit what customers search for — and, critically, when they find NOTHING (`zero_results`),
+  // so gaps in the KB become visible. The search box is client-side only, so nothing was tracked
+  // before. Debounced ~700ms (fire the settled query, not every keystroke) and de-duped so holding a
+  // term while toggling tag filters doesn't re-fire. `results_count` is search-scoped (ignores the
+  // active tag) — the honest "does the KB have anything for this term" signal. Min 2 chars to skip
+  // single-letter noise. GTM needs a `kb_search` Custom Event trigger → GA4 event tag to surface it.
+  const matchCount = matches.length;
+  const lastSearchSent = useRef<string>("");
+  useEffect(() => {
+    const term = q.trim();
+    if (term.length < 2) return;
+    const timer = setTimeout(() => {
+      if (lastSearchSent.current === term) return;
+      lastSearchSent.current = term;
+      dataLayer().push({
+        event: "kb_search",
+        search_term: term,
+        results_count: matchCount,
+        zero_results: matchCount === 0,
+      });
+    }, 700);
+    return () => clearTimeout(timer);
+  }, [q, matchCount]);
 
   return (
     <div className="sup-wrap">
