@@ -18,6 +18,12 @@ const nunito = Nunito({ variable: "--font-nunito", subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "HaldiTech Support",
+  // Multi-zone favicon (#546): this app is mounted at halditech.com/support via a rewrite, and the
+  // Next `app/favicon.ico` convention emits a ROOT-relative `/favicon.ico` link — which under the mount
+  // resolves to halditech.com/favicon.ico (the main zone, no such file → 404, so no favicon showed).
+  // Serve it from a `/support/…` path instead, which the apex rewrite forwards to this zone. Same HT
+  // mark as the home page (apps/website/src/app/icon.svg).
+  icons: { icon: "/support/favicon.svg" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
