@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SupportLanding } from "@/components/SupportLanding";
-import { listSupportDocs, tagsFrom } from "@/lib/support";
+import { listSupportDocs, tagsFrom, toSearchText } from "@/lib/support";
 import { IS_INDEXABLE } from "@/lib/site";
 
 /** The /support landing — search + tag-grouped index of every KB article (Support Track, #546).
@@ -23,6 +23,7 @@ export default async function SupportLandingPage() {
     title: d.title,
     summary: d.summary,
     tags: d.tags,
+    text: toSearchText(d.body),
   }));
   return <SupportLanding docs={landingDocs} tags={tags} />;
 }

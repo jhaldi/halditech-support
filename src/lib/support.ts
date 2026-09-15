@@ -69,6 +69,25 @@ export async function getSupportDoc(slug: string): Promise<SupportDoc | null> {
   return (await listSupportDocs()).find((d) => d.slug === slug) ?? null;
 }
 
+/**
+ * Flatten a doc's markdown body into a normalized, lowercased plain-text blob for full-text search
+ * (Grant's cutover requirement, 2026-09-15 — the landing search must match article text, not just the
+ * title). Drops image syntax + data-URI noise and inline HTML, keeps link labels and code/command text
+ * (users search for config keys and commands), strips markdown emphasis/heading/table markers, and
+ * collapses whitespace. Precomputed server-side so the client filter stays a cheap substring check.
+ */
+export function toSearchText(body: string): string {
+  return body
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ") // images (incl. data URIs) → drop
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1") // links → keep the visible label
+    .replace(/<[^>]+>/g, " ") // inline HTML tags
+    .replace(/[#>*_~`]/g, " ") // md heading/emphasis/code markers
+    .replace(/\|/g, " ") // table pipes
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+}
+
 /** All tags in use, most-common first, for the landing page's category rail. */
 export function tagsFrom(docs: SupportDoc[]): Array<{ tag: string; count: number }> {
   const counts = new Map<string, number>();

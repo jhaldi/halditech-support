@@ -9,7 +9,9 @@ import type { NextConfig } from "next";
 const ZONE_ORIGIN = "https://halditech-support.vercel.app";
 
 const nextConfig: NextConfig = {
-  assetPrefix: ZONE_ORIGIN,
+  // Only the deployed zone needs assets served from its own origin. In local dev the app is served
+  // standalone, so pointing assetPrefix at the remote prod origin 404s every chunk and kills hydration.
+  assetPrefix: process.env.NODE_ENV === "production" ? ZONE_ORIGIN : undefined,
   async headers() {
     return [
       {

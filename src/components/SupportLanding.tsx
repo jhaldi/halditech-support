@@ -16,6 +16,8 @@ export interface LandingDoc {
   title: string;
   summary?: string;
   tags: string[];
+  /** Normalized, lowercased full article text for search (built server-side via toSearchText). */
+  text: string;
 }
 
 export function SupportLanding({
@@ -47,7 +49,8 @@ export function SupportLanding({
       return (
         d.title.toLowerCase().includes(q) ||
         d.summary?.toLowerCase().includes(q) ||
-        d.tags.some((t) => t.toLowerCase().includes(q))
+        d.tags.some((t) => t.toLowerCase().includes(q)) ||
+        d.text.includes(q)
       );
     });
   }, [docs, q]);
