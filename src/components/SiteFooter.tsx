@@ -25,7 +25,7 @@ export function SiteFooter() {
           <div>
             <a href="https://halditech.com/" aria-label="HaldiTech home" className="site-footer__logo">
               {/* eslint-disable-next-line @next/next/no-img-element -- static brand logo */}
-              <img src="/brand/logo-dark-on-light.png" alt="HaldiTech" width={2208} height={354} />
+              <img src="/brand/haldi-logo.png" alt="HaLDi" width={273} height={120} />
             </a>
             <ul className="site-footer__list">
               <li><a href={PHONE_HREF}>{PHONE}</a></li>

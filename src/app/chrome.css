@@ -1,15 +1,9 @@
-/* Site chrome (header + footer) for the Support zone — matches halditech.com's brand shell.
-   Brand tokens: ink #1a1a1a, brand-blue #5c7aea, mist #f4f4f5 (Brand Guidelines §04). */
-:root {
-  --ink: #1a1a1a;
-  --brand-blue: #5c7aea;
-  --mist: #f4f4f5;
-  --fg: #1a1a1a;
-}
+/* Site chrome (header + footer) for the Support zone — matched to the Haldi FCS app:
+   white header, HaLDi logo, navy/red accents. Brand tokens live in globals.css. */
 
 body {
-  font-family: var(--font-nunito), system-ui, sans-serif;
-  color: var(--fg);
+  font-family: var(--font-noto), system-ui, sans-serif;
+  color: var(--foreground);
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -20,8 +14,9 @@ main {
 
 /* --- header --- */
 .site-header {
-  background: var(--ink);
-  color: #fff;
+  background: #fff;
+  color: var(--ink);
+  border-bottom: 1px solid #e6e8f0;
 }
 .site-header__nav {
   max-width: 1120px;
@@ -31,35 +26,47 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  padding: 16px 24px;
+  padding: 12px 24px;
 }
 .site-header__logo {
   display: inline-flex;
+  align-items: center;
 }
 .site-header__logo img {
-  height: 32px;
+  height: 38px;
   width: auto;
 }
 .site-header__actions {
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 .site-btn {
-  font-family: var(--font-bai), system-ui, sans-serif;
+  font-family: var(--font-noto), system-ui, sans-serif;
   white-space: nowrap;
-  border-radius: 6px;
-  background: var(--brand-blue);
-  padding: 8px 16px;
-  font-size: 12px;
+  border-radius: 8px;
+  padding: 8px 15px;
+  font-size: 12.5px;
   font-weight: 700;
-  letter-spacing: 0.03em;
-  color: #fff;
+  letter-spacing: 0.02em;
   text-decoration: none;
+  border: 1.5px solid var(--navy);
+  transition: background 0.12s, color 0.12s;
 }
-.site-btn:hover {
-  opacity: 0.9;
+.site-btn--primary {
+  background: var(--navy);
+  color: #fff;
+}
+.site-btn--primary:hover {
+  background: #26315e;
+}
+.site-btn--ghost {
+  background: transparent;
+  color: var(--navy);
+}
+.site-btn--ghost:hover {
+  background: var(--mist);
 }
 
 /* --- footer --- */

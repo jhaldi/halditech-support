@@ -9,3 +9,26 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Brand tokens — matched to the Haldi FCS app (white UI, navy headings, red HaLDi accent).
+   The legacy --font-bai / --font-nunito names are aliased to Noto Sans so existing component CSS
+   (support.css, chrome.css) keeps working without edits. */
+:root {
+  --font-bai: var(--font-noto), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-nunito: var(--font-noto), system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --navy: #2e3d75; /* app heading navy */
+  --ink: #1f2635; /* darkest text */
+  --foreground: #2b303b; /* body copy */
+  --accent: #a3161b; /* HaLDi red */
+  --brand-blue: #3350a8; /* links / focus */
+  --mist: #f4f6fa; /* light panel */
+  --bg: #ffffff;
+}
+
+body {
+  background: var(--bg);
+  color: var(--foreground);
+  font-family: var(--font-noto), system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}

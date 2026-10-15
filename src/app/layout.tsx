@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Bai_Jamjuree, Nunito } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import { SITE_URL } from "@/lib/site";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import "./globals.css";
 import "./chrome.css";
 
-// Brand fonts (Brand Guidelines §04): Bai Jamjuree for headings/CTAs, Nunito for body.
-const bai = Bai_Jamjuree({
-  variable: "--font-bai",
+// Match the Haldi FCS app, which uses Noto Sans throughout. Exposed as --font-noto; globals.css aliases
+// the legacy --font-bai / --font-nunito vars to it so existing component CSS keeps working.
+const noto = Noto_Sans({
+  variable: "--font-noto",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
-const nunito = Nunito({ variable: "--font-nunito", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${bai.variable} ${nunito.variable}`}>
+    <html lang="en" className={noto.variable}>
       <body>
         {/* ⛔ WIRING BLOCK — Google Tag Manager (GTM-PTNGVBS). Central container; GA4 fires inside it.
             Owned by John + Claude — see AGENTS.md. */}
