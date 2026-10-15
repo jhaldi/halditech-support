@@ -4,6 +4,7 @@ slug: "how-to-import-settlements"
 tags: [Settlements, Getting Started]
 summary: "How to download a settlement CSV from MyGroundBiz and import it into your HaldiTech account."
 freshdesk_id: 150000177201
+published: false
 ---
 
 # How to Import Settlements
@@ -32,14 +33,12 @@ Then click "CSV Text File" to download.
 
 ## Step 4. Start the import in HaldiTech.
 
-Log into your HaldiTech account. In the upper right of the dashboard, click "Import Settlement".
+Sign in to HaldiTech. In the left menu, click **Settlements**, then **FedEx Settlements**. On the settlements toolbar, click **Import New**.
 
-![Import Settlement button on the dashboard](img-5.png)
+![FedEx Settlements grid with the Import New button on the toolbar](img-5.png)
 
-> **Important:** If you have more than one contract, you'll need to select the company from the dropdown before uploading the settlement.
+> **Important:** If you manage more than one contract, confirm the correct company is selected in the account menu at the top right before you import.
 
-## Step 5. Upload the CSV file.
+## Step 5. Choose the CSV file.
 
-Drag and drop the CSV file or click the Browse button and upload the file.
-
-![Import Settlement upload dialog](img-6.png)
+Select the settlement CSV file you downloaded from MyGroundBiz. HaldiTech imports it and adds the settlement to your list.

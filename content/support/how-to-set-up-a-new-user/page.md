@@ -4,22 +4,21 @@ slug: "how-to-set-up-a-new-user"
 tags: [Account & Users, Getting Started]
 summary: "Add a new user in HaldiTech and grant them permissions so they can set their own password."
 freshdesk_id: 150000177183
+published: false
 ---
 
 ## Add the user
 
-Sign in to your HaldiTech account.
+Sign in to your HaldiTech account. In the left menu, go to **Settings > Users**, then click **Add**.
 
-Go to **Settings > Users > Add**.
+![Users list with the Add button on the toolbar](img-1.png)
 
-![Users settings with the Add button](img-1.png)
+Enter the user's name, email, and phone number. Select the permissions you want to grant them, then click **Save**.
 
-Add the user's name, email, and phone number. Select the permissions you wish to grant them, and save.
-
-![New user form with name, email, phone, and permissions](img-2.png)
+![Add User form with name, email, phone, and permission checkboxes](img-2.png)
 
 ## Have the user set their password
 
-The new user will have to go to [fcs.halditech.com](http://fcs.halditech.com/), click **Set Your Password**, and follow the steps.
+The new user will go to [fcs.halditech.com](https://fcs.halditech.com/), click **Set Your Password**, and follow the steps.
 
 ![Set Your Password screen](img-3.png)
