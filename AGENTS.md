@@ -11,6 +11,10 @@ team-authored**. There is no Lovable and no Drive backend here (that was #495, d
   folder, so re-tagging never moves a page.
 - Screenshots: `public/support-assets/<slug>/img-N.png`, referenced in the body as `img-N.png`.
 - To add/edit an article, write/generate the markdown file. The site is fully static (rebuilds on deploy).
+- **Soft-publish / draft:** add `published: false` to the frontmatter to keep an article **out of** the
+  Help Center listing, search, and the sitemap, and serve it `noindex` — while it stays **built and
+  reachable at its direct URL** (`/support/<slug>`), with a "Draft preview" banner. Use it to QA a new or
+  refreshed article at its real URL before it goes live; remove the flag (or set `true`) to publish.
 
 ## ⛔ Do not touch the wiring
 `src/app/layout.tsx` contains the **GTM container** (`GTM-PTNGVBS`) inside `⛔ WIRING BLOCK` markers. GA4

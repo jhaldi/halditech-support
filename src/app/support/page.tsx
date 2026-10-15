@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SupportLanding } from "@/components/SupportLanding";
-import { listSupportDocs, tagsFrom, toSearchText } from "@/lib/support";
+import { listPublishedSupportDocs, tagsFrom, toSearchText } from "@/lib/support";
 import { IS_INDEXABLE } from "@/lib/site";
 
 /** The /support landing — search + tag-grouped index of every KB article (Support Track, #546).
@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function SupportLandingPage() {
-  const docs = await listSupportDocs();
+  const docs = await listPublishedSupportDocs();
   const tags = tagsFrom(docs);
   const landingDocs = docs.map((d) => ({
     slug: d.slug,

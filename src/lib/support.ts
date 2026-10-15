@@ -21,6 +21,10 @@ export interface SupportDoc {
   title: string;
   summary?: string;
   tags: string[];
+  /** false = draft: still built and reachable by its direct URL, but delisted from the Help Center
+   *  and search, left out of the sitemap, and served noindex. Default true. Set `published: false` in
+   *  frontmatter to soft-publish a doc for QA before it goes live. */
+  published: boolean;
   body: string;
 }
 
@@ -32,7 +36,9 @@ function parseDoc(slug: string, raw: string): SupportDoc {
   const title = typeof data.title === "string" && data.title.trim() ? data.title.trim() : slug;
   const summary =
     typeof data.summary === "string" && data.summary.trim() ? data.summary.trim() : undefined;
-  return { slug, title, summary, tags, body: content.trim() };
+  // A doc is published unless it explicitly opts out with `published: false` (soft-publish for QA).
+  const published = data.published !== false;
+  return { slug, title, summary, tags, published, body: content.trim() };
 }
 
 async function readAll(): Promise<SupportDoc[]> {
@@ -67,6 +73,13 @@ export function listSupportDocs(): Promise<SupportDoc[]> {
 
 export async function getSupportDoc(slug: string): Promise<SupportDoc | null> {
   return (await listSupportDocs()).find((d) => d.slug === slug) ?? null;
+}
+
+/** Published docs only — drafts (`published: false`) are excluded. Use for the landing list, search,
+ *  tag counts, and the sitemap. The per-article page uses listSupportDocs/getSupportDoc so a draft is
+ *  still built and reachable by its direct URL. */
+export async function listPublishedSupportDocs(): Promise<SupportDoc[]> {
+  return (await listSupportDocs()).filter((d) => d.published);
 }
 
 /**

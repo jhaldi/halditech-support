@@ -21,6 +21,12 @@
 .sup a:hover { color: var(--brand-blue); text-decoration: underline; }
 .sup-wrap { max-width: var(--sup-maxw); margin: 0 auto; padding: 0 24px; }
 
+/* ---- draft (soft-publish) banner ---- */
+.sup-draft { margin: 16px 0 2px; padding: 11px 15px; border-radius: 10px; font-size: 14px;
+  line-height: 1.5; color: var(--sup-warn); background: var(--sup-warn-bg);
+  border: 1px solid var(--sup-warn-border); }
+.sup-draft strong { color: var(--sup-warn); font-weight: 700; }
+
 /* ---- shared header band ---- */
 .sup-crumbs { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: 13.5px;
   color: var(--sup-faint); padding: 22px 0 4px; font-weight: 600; }

@@ -26,7 +26,8 @@ export async function generateMetadata({
     title: { absolute: `${doc.title} — HaldiTech Support` },
     description: doc.summary,
     alternates: { canonical },
-    ...(IS_INDEXABLE ? {} : { robots: { index: false, follow: false } }),
+    // Drafts (published: false) are always noindex, even in an otherwise-indexable environment.
+    ...(IS_INDEXABLE && doc.published ? {} : { robots: { index: false, follow: false } }),
   };
 }
 

@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { listSupportDocs } from "@/lib/support";
+import { listPublishedSupportDocs } from "@/lib/support";
 import { SITE_URL } from "@/lib/site";
 
 /**
@@ -13,7 +13,7 @@ import { SITE_URL } from "@/lib/site";
  * apps/website into this zone (the apex sitemap no longer knows the article slugs).
  */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const docs = await listSupportDocs();
+  const docs = await listPublishedSupportDocs();
   return [
     { url: `${SITE_URL}/support`, changeFrequency: "weekly", priority: 0.7 },
     ...docs.map((d) => ({

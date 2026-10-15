@@ -51,6 +51,12 @@ export function SupportArticle({ doc }: { doc: SupportDoc }) {
 
   return (
     <div className="sup-wrap">
+      {!doc.published && (
+        <div className="sup-draft" role="status">
+          <strong>Draft preview</strong> — not published. This article is hidden from the Help Center,
+          search, and search engines. Only people with this direct link can see it.
+        </div>
+      )}
       <nav className="sup-crumbs" aria-label="Breadcrumb">
         <Link href="/support">Support</Link>
         <span className="sep">/</span>
