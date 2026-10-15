@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ASSET_ORIGIN } from "@/lib/site";
 
 /** Live-site footer — faithful copy of the website's SiteFooter for the Support zone. Cross-site links
  *  point at the apex (absolute) so they resolve on the preview and under halditech.com/support alike. */
@@ -25,7 +26,7 @@ export function SiteFooter() {
           <div>
             <a href="https://halditech.com/" aria-label="HaldiTech home" className="site-footer__logo">
               {/* eslint-disable-next-line @next/next/no-img-element -- static brand logo */}
-              <img src="/brand/haldi-logo.png" alt="HaLDi" width={273} height={120} />
+              <img src={`${ASSET_ORIGIN}/brand/haldi-logo.png`} alt="HaLDi" width={273} height={120} />
             </a>
             <ul className="site-footer__list">
               <li><a href={PHONE_HREF}>{PHONE}</a></li>

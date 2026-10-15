@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SupportArticle } from "@/components/SupportArticle";
 import { listSupportDocs, getSupportDoc, type SupportDoc } from "@/lib/support";
-import { IS_INDEXABLE, SITE_URL } from "@/lib/site";
+import { ASSET_ORIGIN, IS_INDEXABLE, SITE_URL } from "@/lib/site";
 
 /** Support articles — one static page per KB doc at /support/<slug> (Support Track, #546).
  *  Content is repo markdown (Claude-generated), so all slugs are known at build; no on-demand pages. */
@@ -55,7 +55,7 @@ function articleJsonLd(doc: SupportDoc) {
       author: org,
       publisher: {
         ...org,
-        logo: { "@type": "ImageObject", url: `${SITE_URL}/brand/logo-light-on-dark.png` },
+        logo: { "@type": "ImageObject", url: `${ASSET_ORIGIN || SITE_URL}/brand/haldi-logo.png` },
       },
     },
     {

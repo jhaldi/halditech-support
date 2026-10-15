@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { renderAuthored } from "@/lib/authored";
 import type { SupportDoc } from "@/lib/support";
+import { ASSET_ORIGIN } from "@/lib/site";
 
 /** "Set each truck's Domicile" → "set-each-trucks-domicile". */
 function slugifyHeading(text: string): string {
@@ -29,17 +30,12 @@ function renderBody(doc: SupportDoc): { html: string; toc: Array<{ id: string; t
     return `<h2 id="${id}"${attrs}>${inner}</h2>`;
   });
 
-  // Screenshots are served statically from public/support-assets/<slug>/. In the deployed zone the app is
-  // mounted at halditech.com/support (multi-zone), so images must be absolute to this app's own origin.
-  // In dev / standalone preview the absolute prod origin would serve STALE images (and hide local edits),
-  // so there we use a relative path that resolves against the current origin. Mirrors assetPrefix in
-  // next.config.ts. Override per-deployment with NEXT_PUBLIC_ASSET_ORIGIN.
-  const assetOrigin =
-    process.env.NEXT_PUBLIC_ASSET_ORIGIN ??
-    (process.env.NODE_ENV === "production" ? "https://halditech-support.vercel.app" : "");
+  // Screenshots live in public/support-assets/<slug>/. Under the multi-zone mount they must be absolute
+  // to this zone's own origin (a root-relative path would resolve against the apex). ASSET_ORIGIN handles
+  // prod-vs-dev — see lib/site.ts.
   html = html.replace(
     /(<img\b[^>]*\bsrc=")(img-[^"]+)"/gi,
-    (_m, pre, file) => `${pre}${assetOrigin}/support-assets/${doc.slug}/${file}"`,
+    (_m, pre, file) => `${pre}${ASSET_ORIGIN}/support-assets/${doc.slug}/${file}"`,
   );
 
   return { html, toc };
