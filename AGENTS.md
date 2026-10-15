@@ -15,6 +15,10 @@ team-authored**. There is no Lovable and no Drive backend here (that was #495, d
   Help Center listing, search, and the sitemap, and serve it `noindex` — while it stays **built and
   reachable at its direct URL** (`/support/<slug>`), with a "Draft preview" banner. Use it to QA a new or
   refreshed article at its real URL before it goes live; remove the flag (or set `true`) to publish.
+  - ⚠ **After any publish-status change, resync the CRM link picker.** The CRM reply composer's
+    "Insert doc" picker reads a `support_articles` table; a draft must never be offerable as a link.
+    Run `node --env-file=apps/crm/.env.local apps/crm/scripts/sync-support-articles.mjs --execute`
+    from the `halditech` repo so the picker mirrors the published KB (drafts removed, publishes restored).
 
 ## ⛔ Do not touch the wiring
 `src/app/layout.tsx` contains the **GTM container** (`GTM-PTNGVBS`) inside `⛔ WIRING BLOCK` markers. GA4
