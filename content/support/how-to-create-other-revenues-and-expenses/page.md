@@ -10,27 +10,25 @@ freshdesk_id: 150000208147
 
 Add revenues and expenses that are not included on your FedEx settlements.
 
-## Step 1. Open Other Expenses or Other Revenues
+## Step 1. Open Other Revenues or Other Expenses
 
-Click **Settlements** and select either **Other Expenses** or **Other Revenues**.
+Click **Settlements** and select either **Other Revenues** or **Other Expenses**.
 
 ## Step 2. Add a new record
 
-Click the **+ Add** button to create a new expense or new revenue.
+Click the **Add** button on the toolbar to create a new revenue or expense.
 
-![Other Expenses / Other Revenues grid with the + Add button](img-1.png)
+![The Other Revenues grid with the Add button on the toolbar](img-1.png)
 
 ## Step 3. Enter the details
 
-Select a **Category** using the dropdown, type in a **Description**, and select the date that the expense or revenue took place. Optionally, you can associate the revenue or expense to a **Truck** or **Driver**. Enter the dollar amount.
+Choose a **Category**, type a **Description**, and set the **Date**. Optionally associate the item with a **Truck** or **Driver**, and set **Repeats** if it should recur. Enter the **Amount**.
 
-> **Note:** You cannot create revenues or expenses that will recur weekly or monthly at this time.
-
-![New expense/revenue form with category, description, date, and amount](img-2.png)
+![The new revenue / expense form](img-2.png)
 
 ## Step 4. Save
 
-Once you click **Save**, your expense or revenue is now included in reporting and the Haldi Tech P&L.
+Click **Save** — your revenue or expense is now included in reporting and the HaldiTech P&L.
 
 ---
 
