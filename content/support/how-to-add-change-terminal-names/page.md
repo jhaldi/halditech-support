@@ -6,11 +6,8 @@ summary: "Add or change a linehaul terminal's name so it updates automatically t
 freshdesk_id: 150000177380
 ---
 
-1. Go to **Settings > Linehaul Terminals**.
-2. Type the station number you're looking for in the search box and hit Enter.
-3. Select that station from the list and click the **Edit** button.
-4. Add the terminal name and click **Save**. The name will automatically update throughout the system.
+Go to **Settings > Linehaul Terminals**. Use the **Search** box (top right) to find the station number (**AVR**) you're looking for.
 
-![Linehaul Terminals search and list](img-1.png)
+![The Linehaul Terminals list — search for a station, then double-click its row to edit](img-1.png)
 
-![Terminal edit screen with the name field](img-2.png)
+Double-click the terminal's row to make it editable **directly in the grid**, type the terminal name in the **Name** column, and save your change. The name updates automatically throughout the system.
