@@ -31,19 +31,13 @@ In the left menu, go to **IVMR & IFTA > IVMR Settings**. Check **Create weekly I
 
 ![IVMR Settings — the weekly-report options and Terminal IVMR Contacts](img-1.png)
 
-## Step 4. Set each truck's Domicile and Schedule B.
-
-Go into each truck's profile (in **Trucks**, open the truck). Make sure the correct **Domicile** is selected and **Schedule B** is checked.
-
-> **Important:** If either of these is not set correctly, an IVMR will not be created for that truck.
-
-## Step 5. Enter your terminal IVMR contacts.
+## Step 4. Enter your terminal IVMR contacts.
 
 Back on the **IVMR Settings** page, fill in the **Terminal IVMR Contacts** — the contact name and email address(es) for each terminal you submit IVMRs to. Separate multiple email addresses with a comma. Add your own address to the **Internal IVMR Email** field if you want to receive a copy and processing-error notifications.
 
 > **Note:** If you don't see one of your domiciles in the list, it means no truck has that domicile selected.
 
-## Step 6. Start using Haldi Tech IVMRs.
+## Step 5. Start using Haldi Tech IVMRs.
 
 Once you've submitted your final IVMRs from your old provider, forward those IVMRs to [support@halditech.com](mailto:support@halditech.com), and we'll configure your trucks so the odometers on your first set of HaldiTech IVMRs match exactly for a seamless transition.
 
