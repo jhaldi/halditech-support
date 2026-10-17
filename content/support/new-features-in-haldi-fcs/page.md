@@ -4,7 +4,10 @@ slug: "new-features-in-haldi-fcs"
 tags: [Payroll, Reporting]
 summary: "Release notes for Haldi FCS version 20211105.1, covering new payroll, driver, and settlement features plus resolved issues."
 freshdesk_id: 150000177220
+published: false
 ---
+<!-- Unpublished 2026-10-17 (John): stale 2021 release notes (v20211105.1). Kept for reference; replace with
+     current release notes if we want a "What's New" page, otherwise delete. -->
 
 # Version 20211105.1 is Live!
 
