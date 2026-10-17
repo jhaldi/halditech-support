@@ -6,18 +6,22 @@ summary: "Enable Holiday Bonuses, add holiday dates, and set each eligible drive
 freshdesk_id: 150000177378
 ---
 
-To add Holidays, first go to "Payroll" > "Settings" on the side menu. On the "Contractor" tab, select "Use Holiday Bonuses". On the "Processing" tab, click the "Add Holiday" button and enter the date you want to pay a holiday bonus for.
+Paying holiday bonuses has two parts: turn the feature on and add your holiday dates, then set a bonus for each eligible driver.
 
-![Adding a holiday date on the Processing tab](img-1.png)
+## Turn on holiday bonuses and add holiday dates
 
-Once you set the holidays, you have to turn on the Holiday Bonus for each eligible driver and set a holiday bonus amount. To do that, open each driver's settings and go to the "Salary, Daily, Holiday, & PTO Rates" tab. Check the box "Driver Gets Paid a Bonus for Working Holidays" and then select the Holiday Bonus Type and enter a Holiday Bonus Rate for that driver and click "Save".
+Go to **Payroll > Settings**. On the **Contractor** tab, check **Use Holiday Bonuses**.
 
-Once that is done, the system will automatically add that Holiday Bonus to that driver's pay when he or she works on that day.
+![Payroll Settings, Contractor tab — Use Holiday Bonuses](img-1.png)
 
-> **Note:** The bonus is added to the driver's normal driving rates, it does not override them.
+On the **Processing** tab, use the **Add Holiday** button (under "Holidays") to add each date you want to pay a holiday bonus for.
 
-To be clear, the system will only apply the Holiday Bonus when the dispatch date on the settlement matches the holiday date set. For example, if you set 11/24/22 (Thanksgiving) as a holiday, but the driver is dispatched on 11/23/2022 at 11:59pm, the system won't add the bonus.
+![Payroll Settings, Processing tab — Add Holiday](img-2.png)
 
-![The driver's Salary, Daily, Holiday, & PTO Rates tab](img-2.png)
+## Set each eligible driver's holiday bonus
 
-![The Holiday Bonus settings for a driver](img-3.png)
+Open each eligible driver's record (**Drivers** > select the driver > **Edit** > the pencil icon), go to the **Salary, Daily, Holiday, & PTO Rates** tab, check **Driver Gets Paid a Bonus for Working Holidays**, choose the **Holiday Bonus Type**, enter a **Holiday Bonus Rate**, and click **Save**.
+
+The system then automatically adds the holiday bonus to that driver's pay when they work on a holiday date.
+
+> **Note:** The bonus is added to the driver's normal driving rates — it doesn't override them. The system only applies it when the **dispatch date** on the settlement matches a holiday date. (For example, if you set 11/24 as a holiday but the driver is dispatched 11/23 at 11:59pm, no bonus is added.)
