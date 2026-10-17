@@ -8,34 +8,22 @@ freshdesk_id: 150000184515
 
 ## Accessing MMRs
 
-From your HaldiTech dashboard, select the Maintenance drop-down tab and then select "Print MMRs" (example below).
+Go to **Maintenance > MMR Reporting**. It's a four-step wizard.
 
-![Selecting Print MMRs from the Maintenance menu](img-1.png)
+### Step 1. Select the date range
 
-You have the option to select a custom date range or settlement intervals (quick pick) and click "Run Analysis" (example below).
+Choose a **Date Range**, or use the **Quick Pick** dropdown (Last Month, last quarter, last year, etc.), then click **Run Analysis**.
 
-![Selecting a date range and running the analysis](img-2.png)
+![MMR Reporting — select the date range and click Run Analysis](img-1.png)
 
-Selecting "Quick Pick" will give you access to MMRs from last month, quarter, and year (example below).
+### Step 2. Select the trucks to include
 
-![Quick Pick options for last month, quarter, and year](img-3.png)
+Once the analysis runs, check the trucks you want to include in the MMR.
 
-Select the trucks that you wish to include in your MMR (see below).
+### Step 3. Add your signature
 
-![Selecting the trucks to include in the MMR](img-4.png)
+Add your signature and save it.
 
-Add your signature below and click save (example below).
+### Step 4. Download
 
-![Adding a signature and saving](img-5.png)
-
-You may download the MMRs with or without attachments.
-
-![Download options with or without attachments](img-6.png)
-
-The PDF will download and look similar to the example below.
-
-![Example of the downloaded MMR PDF](img-7.png)
-
-To make adjustments to your MMR, simply click in the grey boxes of your PDF (see below).
-
-![Editing the MMR PDF by clicking the grey boxes](img-8.png)
+Download the MMRs **with or without attachments**. The PDF downloads for you to review and submit.
