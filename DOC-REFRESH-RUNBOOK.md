@@ -118,6 +118,14 @@ and md5-compare** to your capture — don't eyeball an in-page re-render.
 - **View-only in edit modals** — never click **Save**; **Cancel** out. You're on real (demo) data.
 - **Foghorn demo data is synthetic** — safe to show in screenshots.
 - **Native screenshot flaky** — if `save_to_disk` returns no path, that's expected; use html2canvas.
+- **Native file dialogs freeze the tab.** Toolbar buttons that upload a file (e.g. Service Items **Import
+  Excel**, any "choose file") open an **OS file picker** that blocks CDP — screenshots then time out
+  ("renderer unresponsive"). Don't click them during a capture run; if you get stuck, send **Escape** via the
+  `computer` key action to dismiss the picker and recover the tab.
+- **Account Settings / Payroll Settings text probes can trip a sensitive-data block.** Broad `innerText`/DOM
+  scans on screens holding tokens/credentials return `[BLOCKED: Cookie/query string data]`. Capture the screen
+  as an image (html2canvas) and read it, instead of returning page text — and never screenshot credentials,
+  tokens, or card details into a public doc.
 - **Branch model** (canon): work on `integration`, but refreshed docs are shipped on `main` (that's where the
   live/QA copies sit); drafts (`published:false`) ride along safely. Prod publish of real content is John's call
   via the normal publish flow.
