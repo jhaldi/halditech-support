@@ -6,20 +6,20 @@ summary: "Filter the Revenue Finder Status column to hide closed issues and show
 freshdesk_id: 150000210316
 ---
 
-## Using Revenue Finder Filter
+## Using the Revenue Finder Filter
 
-Remove closed issues from your view to only see open issues.
+Remove closed issues from your view so you only see open ones.
 
 ## Step 1. Turn on the column filters
 
-To remove closed issues from the view in Revenue Finder, click the "Filter" button in the toolbar. This will cause a small filter icon to appear next to each column. If you don't see the small filter icon, click the "Filter" button in the toolbar once.
+In **Revenue Finder > Revenue Issues**, click the **Filter** button in the toolbar. A small filter icon appears next to each column header. (If you don't see the icons, click **Filter** once more.)
 
 ![The Filter button in the Revenue Finder toolbar](img-1.png)
 
-## Step 2. Filter out Closed status
+## Step 2. Filter out the Closed status
 
-Click on the little filter next to the "Status" column. In the box that pops up, choose "Not Equal" from the top dropdown, and type "Closed" into the second box, then click "Filter".
+Click the filter icon next to the **Status** column. In the box that pops up, choose **Not Equal** from the dropdown, type **Closed** in the value box, and click **Filter**.
 
-![Setting the Status filter to Not Equal "Closed"](img-2.png)
+![Set the Status filter to Not Equal "Closed"](img-2.png)
 
 **Need Help?** [support@halditech.com](mailto:support@halditech.com) or call us at 470-594-2534
