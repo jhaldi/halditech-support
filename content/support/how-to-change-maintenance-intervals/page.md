@@ -2,24 +2,22 @@
 title: "How to change maintenance intervals"
 slug: "how-to-change-maintenance-intervals"
 tags: [Maintenance]
-summary: "Change maintenance intervals from the Maintenance Matrix by adding a new entry and filling in the required information."
+summary: "Change a maintenance interval by editing its entry in the Maintenance Matrix (Requirements)."
 freshdesk_id: 150000184331
 ---
 
 ## Step 1. Open the Maintenance Matrix
 
-In your HaldiTech software, select the **Maintenance Matrix** under the **Maintenance** drop-down.
+Go to **Maintenance > Requirements** (the Maintenance Matrix).
 
-![Maintenance drop-down with Maintenance Matrix](img-1.png)
+![The Requirements list](img-1.png)
 
-## Step 2. Add an interval
+## Step 2. Edit the interval
 
-Click the **Add** icon.
+Double-click the requirement you want to change (or select it and click **Edit**). Update the **Every** interval — and **Based On**, if you're switching between miles and time.
 
-![Add icon on the Maintenance Matrix](img-2.png)
+![The requirement form — change the Every interval](img-2.png)
 
-## Step 3. Fill in the details and save
+## Step 3. Save
 
-Fill out the highlighted information and click **Save**.
-
-![Maintenance interval entry form](img-3.png)
+Click **Save**.

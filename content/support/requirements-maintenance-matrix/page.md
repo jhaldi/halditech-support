@@ -8,36 +8,16 @@ freshdesk_id: 150000184778
 
 # Requirements
 
-The Requirements tab is an extension of the Maintenance Matrix. You can create any requirement you need in terms of preventative maintenance.
+The **Requirements** tab (under **Maintenance**) is where you build the preventative-maintenance services that populate the **Maintenance Matrix**. You can create any requirement you need — DoT inspections, PMs, oil changes, overheads, tires, and so on.
 
-![The Requirements tab](img-1.png)
+![The Requirements list — service definitions that feed the Matrix](img-1.png)
 
-You will be able to add columns by clicking the **Add** icon. This will create a heat map that shows you when the next service for each truck is due. This is based on odometers being pulled through TruckSpy or average miles that come in on your settlement, located in the **Source** column. If you don't have TruckSpy or Mileage Reports, we will pull your odometer reading from the last service visit that was entered for the truck. We then take the odometer that was entered and add the miles that accrued from the settlement since that service visit.
+## Adding a service to the Matrix
 
-![Maintenance Matrix heat map with the Source column](img-2.png)
+In **Requirements**, click **Add**. Choose an existing **Service** or click **+ Add New Service** and give it a **Short Name**. Set **Based On** (miles, time, or both), the **Every** interval, which trucks it **Applies To**, and optional warning/alert emails, then click **Save**.
 
-## Adding a service to the Maintenance Matrix
+![The requirement form](img-2.png)
 
-The Maintenance Matrix is populated by going to **Requirements**. You can choose your own custom name for the preventative maintenance (e.g. "PM", "Oil Change", "New Tires", etc.). In **Requirements**, click the **Add** icon (example below).
+## How the Matrix figures out what's due
 
-![Requirements tab with the Add icon](img-3.png)
-
-In the next window, select **Add New Service** (see below).
-
-![Add New Service option](img-4.png)
-
-On the next window, type in the **Tag Name** (name of service) and click **Save** (see below).
-
-![Tag Name entry for the new service](img-5.png)
-
-You can set the parameters in the boxes highlighted below.
-
-![Service parameters](img-6.png)
-
-After saving the new service, in the Maintenance Matrix you can see below that "Overhead" has been added.
-
-![Maintenance Matrix showing the added Overhead service](img-7.png)
-
-You will now be able to see the new service added to the Maintenance Matrix (screenshot below).
-
-![New service shown in the Maintenance Matrix](img-8.png)
+The Matrix shows when each truck's next service is due. It's driven by odometer readings pulled from **TruckSpy** or **MileageReports** (shown in the **Source** column). If you don't have either, HaldiTech uses the average miles from your settlements, added to the odometer recorded on the truck's last service visit.
