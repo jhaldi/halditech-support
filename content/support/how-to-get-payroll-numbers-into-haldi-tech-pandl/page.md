@@ -8,30 +8,24 @@ freshdesk_id: 150000177190
 
 # How to get Payroll Numbers into Haldi Tech P&L
 
-> **Note:** This is a short-term workaround. We're currently working on the functionality for you to import your weekly payroll totals per driver into the system.
+> **Note:** This is a short-term workaround while we build direct import of weekly payroll totals per driver.
 
-## Step 1. Open the payroll week.
+## Step 1. Open the payroll week
 
-Go to "Payroll" and click the payroll week you want to add numbers for.
+Go to **Payroll** and double-click the payroll week you want to add numbers for.
 
-## Step 2. Open the Adjustments tab.
+## Step 2. Open the Adjustments tab
 
-When payroll opens, click on the "Adjustments" tab at the top.
+Click the **Adjustments** tab at the top.
 
-## Step 3. Export the pre-filled template.
+![The payroll Adjustments tab](img-1.png)
 
-Click "Export to Excel" and choose the "pre-filled template" option. Open the Excel file. It will have a row for each driver.
+## Step 3. Export the pre-filled template
 
-## Step 4. Enter each driver's gross pay.
+Click **Export Excel**, choose **Pre-Filled Import Template**, and click **Export**. The file has a row for each driver.
 
-In the category field on the spreadsheet, select "Other" and enter each driver's gross pay into the "Amount" column. Save the file. If the driver did not work or has no pay, leave the amount blank.
+![Export Excel — choose Pre-Filled Import Template](img-2.png)
 
-## Step 5. Import the file.
+## Step 4. Add your payroll numbers and import
 
-Go back into the Haldi system and click the "Import Excel" button on the adjustments tab and upload the file.
-
-> **Important:** If you upload the file more than once, it will duplicate the records.
-
-## Step 6. Lock payroll.
-
-When the file is uploaded, go to the "Lock and Load" tab and click the green "Lock Payroll" button. Once you lock the payroll, you'll see the numbers flow into the HaldiTech P&L and the other reports.
+Enter each driver's weekly gross pay in the template, save it, and import the completed file back into the Adjustments tab. The totals then flow into the HaldiTech P&L and reports.
