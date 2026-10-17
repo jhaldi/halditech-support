@@ -2,26 +2,18 @@
 title: "How to create a service ticket in Maintenance"
 slug: "how-to-create-a-service-ticket-in-maintenance"
 tags: [Maintenance]
-summary: "Create a service ticket from the Maintenance Matrix by adding a Service Item and filling in the required details."
+summary: "Record a maintenance service on a truck by adding a service item under Maintenance."
 freshdesk_id: 150000184187
 ---
 
-## Creating Service Tickets
+## Creating a Service Record
 
-In your HaldiTech software, select Maintenance Matrix (see below).
+In your HaldiTech software, go to **Maintenance > Service Items**.
 
-![Selecting Maintenance Matrix](img-1.png)
+![The Service Items list with the Add button on the toolbar](img-1.png)
 
-Select the "Service Items" (example below).
+Click the **Add** button on the toolbar. On the form, fill out the service details — the **Truck**, the service dates, the **Service** and **Service Type**, odometer, shop, invoice, and costs — then click **Save**.
 
-![Selecting Service Items](img-2.png)
+![The service record form](img-2.png)
 
-Select the "Add icon" (shown below).
-
-![Selecting the Add icon](img-3.png)
-
-On the next screen, fill out the information highlighted in the example below and then click save (see below).
-
-![Filling out the service item details and saving](img-4.png)
-
-> **Note:** FedEx requires a description for the service.
+> **Note:** FedEx requires a description for the service — use the **Other Description** or **Notes (Included On MMR)** field.
