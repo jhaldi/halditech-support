@@ -4,7 +4,7 @@ slug: "how-to-set-up-ivmrs"
 tags: [IVMR & IFTA, Getting Started, Integrations]
 summary: "How to connect your ELD and configure Haldi Tech to auto-generate and send weekly IVMRs."
 freshdesk_id: 150000207119
-published: false
+published: true
 ---
 
 # How to Use IVMRs

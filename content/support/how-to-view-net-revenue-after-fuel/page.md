@@ -4,7 +4,7 @@ slug: "how-to-view-net-revenue-after-fuel"
 tags: [Settlements, Reporting, Fuel]
 summary: "How to see net revenue after fuel on a settlement's Summary tab."
 freshdesk_id: 150000177219
-published: false
+published: true
 ---
 
 # How to View Net Revenue After Fuel

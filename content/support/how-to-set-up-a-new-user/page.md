@@ -4,7 +4,7 @@ slug: "how-to-set-up-a-new-user"
 tags: [Account & Users, Getting Started]
 summary: "Add a new user in HaldiTech and grant them permissions so they can set their own password."
 freshdesk_id: 150000177183
-published: false
+published: true
 ---
 
 ## Add the user

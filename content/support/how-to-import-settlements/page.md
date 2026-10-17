@@ -4,7 +4,7 @@ slug: "how-to-import-settlements"
 tags: [Settlements, Getting Started]
 summary: "How to download a settlement CSV from MyGroundBiz and import it into your HaldiTech account."
 freshdesk_id: 150000177201
-published: false
+published: true
 ---
 
 # How to Import Settlements
