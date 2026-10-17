@@ -6,20 +6,22 @@ summary: "Enable hourly rates, create rate types, assign them to drivers, and ad
 freshdesk_id: 150000190829
 ---
 
-Go to Payroll > Settings.
+## Step 1. Turn on hourly rates
 
-Check the box next to "Use Hourly Rates". A new tab will appear at the top called "Hourly Rates".
+Go to **Payroll > Settings**. On the **Contractor** tab, check **Use Hourly Rates**. A new **Hourly Rates** tab appears at the top.
 
-![Enabling Use Hourly Rates in Payroll Settings](img-1.png)
+![Payroll Settings, Contractor tab — Use Hourly Rates](img-1.png)
 
-On the Hourly Rates tab, click "Add", then add a name for the rate you want to create. For example, you could add one rate called "Regular" and one called "Overtime".
+## Step 2. Create your rate types
 
-![Adding a named hourly rate](img-2.png)
+On the **Hourly Rates** tab, click **Add** and give the rate a name — for example, one called **Regular** and one called **Overtime**.
 
-Now that you've created a rate, go into each driver's profile to the "Hourly Rate" tab, and add the rate for that driver.
+![The Hourly Rates tab — add a named rate](img-2.png)
 
-![Assigning an hourly rate on the driver's Hourly Rate tab](img-3.png)
+## Step 3. Assign a rate to each driver
 
-Once the drivers' rates are set up, in Payroll, go to the "Driver Hours" tab, and click "add". Select the driver, the number of hours, and which rate type you want to apply.
+Open each driver's record (**Drivers** > select the driver > **Edit** > the pencil icon) and go to the **Hourly Rate** tab, then set that driver's rate.
 
-![Adding driver hours and selecting the rate type](img-4.png)
+## Step 4. Enter driver hours
+
+In **Payroll**, open the **Driver Hours** tab and click **Add**. Select the driver, the number of hours, and which rate type to apply.
