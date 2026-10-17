@@ -6,18 +6,16 @@ summary: "Deactivate a driver by unchecking Current Employee on their Details ta
 freshdesk_id: 150000177222
 ---
 
-Instead of permanently deleting a driver, you must mark them as no longer working for you.
+Instead of permanently deleting a driver, mark them as no longer working for you.
 
-To do this, go into a Driver's profile, then click on the "Details" tab, then uncheck the "Current Employee" box.
+Go to **Drivers**, select the driver and click **Edit** on the toolbar (or double-click the driver) to open their record, then click the **edit (pencil)** icon. On the **Details** tab, uncheck **Current Employee**.
 
-![Unchecking the Current Employee box on the Details tab](img-1.png)
+![The driver's Details tab — uncheck Current Employee](img-1.png)
 
-After the "Current Employee" box is unchecked, you will see options to enter a termination date, termination notes, and be able to flag the driver as eligible for rehire. These fields are optional.
+Once **Current Employee** is unchecked, you can optionally enter a **Term Date**, **Termination Notes**, and flag the driver as **Eligible For Rehire**. These fields are optional. Click **Save**.
 
-Once a driver is marked as not current, they will display in the list of drivers in grey. They will also no longer show up in Payroll, Scheduling, or Messaging.
+Once a driver is marked not current, they appear **in grey** in the driver list and no longer show up in Payroll, Scheduling, or Messaging.
 
-![A deactivated driver shown in grey in the driver list](img-2.png)
+![The driver list — deactivated drivers appear in grey](img-2.png)
 
-If you no longer want to see them in the list, use a filter on the "Current" column, and set the filter to "True".
-
-![Filtering the Current column to True](img-3.png)
+If you no longer want to see them in the list, filter the **Current** column to **True**.
