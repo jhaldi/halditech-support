@@ -2,16 +2,14 @@
 title: "How To Set Up User Permissions"
 slug: "how-to-set-up-user-permissions"
 tags: [Account & Users]
-summary: "Edit a user's permissions from Settings > Users by selecting the permissions to set and saving."
+summary: "Edit a user's permissions from the Users screen by selecting the permissions to grant and saving."
 freshdesk_id: 150000177227
 ---
 
-Go to Settings >> Users.
+Go to **Users** in the left menu. Select the user whose permissions you want to change, then click **Edit** on the toolbar.
 
-Select the user you want to edit permissions for. Click on Edit.
+![The Users list — select a user and click Edit](img-1.png)
 
-![Selecting a user and clicking Edit under Settings > Users](img-1.png)
+On the **Edit User** screen, check or uncheck the permissions for that user — use **Select All** / **Select None** to toggle everything at once — then click **Save**.
 
-Select the permissions you want to set for that user and click save.
-
-![Setting the user's permissions and saving](img-2.png)
+![The Edit User screen — set the user's permissions, then Save](img-2.png)
