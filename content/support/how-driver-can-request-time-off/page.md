@@ -8,14 +8,8 @@ freshdesk_id: 150000184019
 
 # Requesting Time Off
 
-- In the dispatch screen in the mobile app, click the red plus sign in the lower right-hand corner (shown below).
+In the mobile app, on the **Dispatch** screen, tap the red **+ (Actions)** button in the bottom-right corner and choose **Time-Off Request**.
 
-![Red plus sign in the lower right corner of the dispatch screen](img-1.png)
+Set the **Starting** and **Ending** date/time, add a **Description**, then save your request. It will show a status of **REQUESTED** until your dispatcher reviews it.
 
-- Select **Time Off Request** (shown below).
-
-![Time Off Request option](img-2.png)
-
-- Select the starting date, ending date, time off type, and description, then click **Save** (shown below).
-
-![Time off request form with date, type, and description fields](img-3.png)
+![The Time-Off Request form — set the starting and ending date/time and a description](img-1.png)
