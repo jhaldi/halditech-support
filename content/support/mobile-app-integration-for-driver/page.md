@@ -8,34 +8,12 @@ freshdesk_id: 150000183828
 
 # Mobile App Integration For Driver
 
-## Register Your Driver
+## Register your driver
 
-- In your HaldiTech dashboard, click on the driver icon (as shown below).
+In HaldiTech, go to **Drivers** in the left menu. Make sure the driver has an **email address** and **phone number** on their record, then **right-click** the driver and choose **Register For App**.
 
-![Driver icon in the HaldiTech dashboard](img-1.png)
+![The Drivers list — right-click a driver to Register For App](img-1.png)
 
-- In your HaldiTech Driver tab, right click on the driver, and click Register For App (as shown below).
+## Create your login and password
 
-![Register for app from the driver right-click menu](img-2.png)
-
-## Creating your login and password
-
-- You will receive an email with your user name and a link to create a password (as shown below).
-
-![Email with user name and password link](img-3.png)
-
-- After opening the link, click "Send Verification Code" to create your password (as shown below).
-
-![Send Verification Code screen](img-4.png)
-
-- Enter the verification code and click "Verify Code" (as shown below).
-
-![Enter and verify code screen](img-5.png)
-
-- Your email is now verified and you may click Continue (as shown below).
-
-![Email verified, click Continue](img-6.png)
-
-- You will now be prompted to create a password (as shown below).
-
-![Create a password screen](img-7.png)
+The driver receives an email with their username and a link to create a password. After opening the link, they click **Send Verification Code**, enter the code, and set their password. They can then sign in to the mobile app.
