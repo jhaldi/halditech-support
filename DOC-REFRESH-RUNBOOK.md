@@ -104,7 +104,10 @@ and md5-compare** to your capture — don't eyeball an in-page re-render.
 5. **Keep each doc internally coherent** — never ship new text that contradicts an old screenshot. If a shot is
    now wrong and you can't recapture, drop the ref and flag the doc for a fresh capture rather than leave a lie.
 6. Commit per doc/batch; push to `main` (drafts `published:false` are safe to ship — `noindex`, out of listing).
-   Vercel rebuilds.
+   Vercel rebuilds. *(2026-10-19: the GitHub→Vercel git connection had silently dropped — `link.type` was
+   `None` and 4 main commits sat undeployed. Reconnected via `vercel git connect https://github.com/jhaldi/halditech-support.git`;
+   production branch = `main`. If pushes stop auto-deploying again, check the project's Git connection first;
+   `vercel deploy --prod` from the repo is the always-works fallback.)*
 7. **On any publish-status change**, resync the CRM link picker (from the `halditech` repo):
    `node --env-file=apps/crm/.env.local apps/crm/scripts/sync-support-articles.mjs --execute`
 
