@@ -1,0 +1,27 @@
+name: Resync CRM doc picker
+
+# Keeps the CRM reply composer's "Insert doc" picker (public.support_articles) in sync with this KB's PUBLISHED
+# set. Runs on every push to main that changes content (or the sync script), so publishing/unpublishing a doc
+# auto-updates the picker — no manual step from the halditech repo. Also runnable on demand.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/support/**"
+      - "scripts/sync-support-articles.mjs"
+      - ".github/workflows/resync-picker.yml"
+  workflow_dispatch: {}
+
+jobs:
+  resync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Sync support_articles to the published KB
+        run: node scripts/sync-support-articles.mjs --execute
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
