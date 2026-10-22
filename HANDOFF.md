@@ -93,7 +93,18 @@ Punch list (what's blocked and why):
 - **Grant** — review.
 - **John** — break-glass admin only. Route product/QA questions to Josh/Grant, *not* John — that's the point.
 
-## 10. Your first task
-Do **one doc end-to-end with a human watching** (John's ~1hr walkthrough) before going solo — pick a clean one, run
-the full loop (code → live → screenshots → draft → QA → publish). You'll learn the loop far faster by doing one than
-by reading about it.
+## 10. How to start (self-guided — there is no walkthrough)
+This doc + `DOC-REFRESH-RUNBOOK.md` are the complete transfer; nobody is going to walk you through it. Start like
+this:
+1. **Prove the pipeline works first.** Have Josh log you into Foghorn (per the runbook), do the Chrome download
+   sanity-check, and capture one throwaway screenshot end-to-end. Fix any setup issue (usually the "ask where to
+   save" toggle) before doing real work.
+2. **Do one real doc, solo.** Take a fresh request from Josh, or pick a *product-decision* punch-list item (not a
+   capture-blocked one) and ask Josh the decision. Run the full loop: read the `haldifcs` code for the real
+   behavior → inspect it live in Foghorn → capture screenshots → write the draft as `published: false`.
+3. **Send the draft URL to Josh for QA** (it's live at `/support/<slug>` with a Draft-preview banner). On his OK,
+   set `published: true` and push to `main` — it deploys and the picker auto-resyncs.
+4. **When something's off** (UI doesn't match the code, a screen won't capture, a workflow looks changed): **flag it
+   to Josh, don't fake it.** That's the whole job.
+
+**Who to ask:** Josh (product calls + QA), Grant (review), John (break-glass only).
